@@ -17,30 +17,33 @@ Prefer `let` and `const`; we'll get to this in a bit!
 ---
 
 ## Primitive Types
+
 ```js
-const aString = 'Hello'; // String
+const aString = "Hello"; // String
 const aNumber = 13; // Number
 const aBoolean = true; // Boolean
 const aNull = null; // Null
 const anUndefined = undefined; // Undefined
-const aSymbol = Symbol('a symbol') // Symbol
+const aSymbol = Symbol("a symbol"); // Symbol
 ```
 
 ---
 
 ## Types
+
 ```js
 // Object
 const anEmptyObject = {};
-const anotherObject = {}
+const anotherObject = {};
 // Array
 const anEmptyArray = [];
-const anotherArray = ['Bob', 19, false]
+const anotherArray = ["Bob", 19, false];
 ```
 
 ---
 
 ## Comments
+
 ```js
 // This is a line comment.
 /*
@@ -51,35 +54,37 @@ This is a block style comment.
 ---
 
 ## Operators
+
 ```js
 // Addition
 const thirteen = 5 + 8;
-const concatString = "Hello " + "world!"
+const concatString = "Hello " + "world!";
 
 // Subtraction
 const three = 8 - 5;
 // Multiplication
 const thirty = 3 * 10;
 // Division
-const thirtyThree = 66 / 2; 
+const thirtyThree = 66 / 2;
 ```
 
 ---
 
 ## Comparisons
+
 ```js
-// Equal to              
-a == b;	 // false
-// Not equal to        
+// Equal to
+a == b; // false
+// Not equal to
 a != b; // true
-// Less than equal to  
-a <= b;	// true
+// Less than equal to
+a <= b; // true
 // Greater than or equal to
-a >= b;	// false
+a >= b; // false
 // Less than
-a < b;	// true
+a < b; // true
 // Greater than
-a > b;	  // false
+a > b; // false
 ```
 
 ---
@@ -111,6 +116,7 @@ Also, be careful when comparing variables of different type or against null/unde
 ---
 
 ## Conditionals
+
 ```js
 // If statement
 if (someCondition) {
@@ -126,12 +132,13 @@ const something = someCondition ? doSomething() : doSomethingElse();
 ---
 
 ## Switch
+
 ```js
-switch(someCondition) {
-  case 'value1':
+switch (someCondition) {
+  case "value1":
     doSomethingWithValue1(someCondition);
     break;
-  case 'value2':
+  case "value2":
     doSomethingWithValue2(someCondition);
     break;
   default:
@@ -142,6 +149,7 @@ switch(someCondition) {
 ---
 
 ## Logical Operators
+
 ```js
 // OR
 const result = a || b;
@@ -160,28 +168,31 @@ if (!conditionThree)  {
 ---
 
 ## Loops
-```js
-  for (let i = 0; i < 10; i++) {
-    console.log(i);
-  }
 
-  while(someCondition) {
-    // code here continues to execute until someCondition is false
-  }
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+while (someCondition) {
+  // code here continues to execute until someCondition is false
+}
 ```
+
 There are better ways to loop, especially when looping through arrays. We'll discuss this later.
 
 ---
 
-## Functions 
+## Functions
+
 ```js
-function aFunctionDeclaration(anArg) { 
-  console.log(anArg); 
+function aFunctionDeclaration(anArg) {
+  console.log(anArg);
 }
-const aFunctionExpression = function(anArg) { 
-  console.log(anArg); 
+const aFunctionExpression = function(anArg) {
+  console.log(anArg);
 };
-const anArrowFunction = anArg => console.log(anArg); 
+const anArrowFunction = anArg => console.log(anArg);
 const aNewFunction = new Function("anArg", "console.log(anArg)");
 
 // Execution
@@ -190,6 +201,3 @@ aFunctionExpression("JS");
 anArrowFunction("Workshop");
 aNewFunction("!");
 ```
-
-
-
