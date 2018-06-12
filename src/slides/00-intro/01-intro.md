@@ -10,7 +10,7 @@
 
 ---
 
-### Created in 1995 by Brandan Eich
+### Created in 1995 by Brendan Eich
 
 ---
 
