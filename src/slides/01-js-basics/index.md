@@ -34,7 +34,10 @@ const aSymbol = Symbol("a symbol"); // Symbol
 ```js
 // Object
 const anEmptyObject = {};
-const anotherObject = {};
+const anotherObject = {
+  aProperty: "Property One",
+  anotherProperty: "Property Two"
+};
 // Array
 const anEmptyArray = [];
 const anotherArray = ["Bob", 19, false];
