@@ -1,7 +1,7 @@
-import React from "react";
-import TwitterIcon from "react-icons/lib/fa/twitter";
+import React from 'react';
+import TwitterIcon from 'react-icons/lib/fa/twitter';
 
-import "./person.css";
+import './person.css';
 
 export default function Person({ avatar, name, title, twitter }) {
   return (
