@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@objectpartners/revealjs-theme@~0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@objectpartners/revealjs-theme/-/revealjs-theme-0.0.1.tgz#bd1d9c37b12aa3cc9e02c312c926fe9c293d9106"
+"@objectpartners/revealjs-theme@~0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@objectpartners/revealjs-theme/-/revealjs-theme-0.0.3.tgz#4f4b0c58708ec85091abae50e3032e88f2311142"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
