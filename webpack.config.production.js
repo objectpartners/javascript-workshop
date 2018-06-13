@@ -1,5 +1,5 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const regexEqual = require("is-equal-regex");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const regexEqual = require('is-equal-regex');
 
 const CSS_EXPR = /\.css$/;
 
@@ -11,7 +11,7 @@ module.exports = function webpackConfigProduction(baseConfig) {
     .concat([
       {
         test: CSS_EXPR,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       }
     ]);
 
@@ -21,8 +21,8 @@ module.exports = function webpackConfigProduction(baseConfig) {
     }),
     plugins: baseConfig.plugins.concat([
       new MiniCssExtractPlugin({
-        filename: "[name].[hash].css",
-        chunkFilename: "[id].[hash].css"
+        filename: '[name].[hash].css',
+        chunkFilename: '[id].[hash].css'
       })
     ])
   });
