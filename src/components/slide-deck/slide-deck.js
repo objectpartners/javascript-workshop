@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import qs from "query-string";
 
 import "prismjs";
 import loadLanguages from "prismjs/components/index.js";
@@ -15,19 +16,27 @@ import "./slide-deck.css";
 
 export class SlideDeck extends Component {
   componentDidMount() {
+    const params = qs.parse(location.search);
+    const print = typeof params["print-pdf"] !== "undefined";
     loadLanguages(["groovy", "json", "jsx", "flow", "typescript"]); // why groovy? Exactly.
     require.ensure(
       [
         "reveal.js",
         "reveal.js/lib/js/classList.js",
         "reveal.js/lib/js/head.min.js",
-        "reveal.js/lib/js/html5shiv.js"
+        "reveal.js/lib/js/html5shiv.js",
+        "reveal.js/css/print/pdf.css"
       ],
       () => {
         const Reveal = require("reveal.js");
         require("reveal.js/lib/js/classList.js");
         require("reveal.js/lib/js/head.min.js");
         require("reveal.js/lib/js/html5shiv.js");
+
+        if (print) {
+          document.documentElement.classList.add("print-pdf");
+          require("reveal.js/css/print/pdf.css");
+        }
 
         window.Reveal = Reveal;
 
