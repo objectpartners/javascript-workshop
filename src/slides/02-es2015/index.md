@@ -14,7 +14,7 @@ These features have been _fantastic_ for JavaScript development
 
 ---
 
-### `import` and `export`
+### Modules
 
 #### `import`
 
@@ -151,9 +151,9 @@ function Timer() {
 
 ### Template strings
 
-Multi-line strings and variable replacement, solved!
+Multi-line strings and variable interpolation!
 
-#### Backticks (```)
+#### Backticks (\`...\`)
 
 ---
 
@@ -162,7 +162,7 @@ Multi-line strings and variable replacement, solved!
 ```js
 var multiLineStr = "I am a multi-line\n" + "string\n" + "and another line";
 
-var varReplacement = multiLineStr + "\nAnother line";
+var interpolation = multiLineStr + " Another line";
 ```
 
 #### New hotness
@@ -172,8 +172,7 @@ const multiLineStr = `I am a multi-line
 string
 and another line`;
 
-const varReplacement = `${multiLineStr}
-Another line`;
+const interpolation = `${multiLineStr} Another line`;
 ```
 
 ---
@@ -243,4 +242,30 @@ function greet(name, greeting = "Hello") {
 }
 
 greet("World"); // Hello World!
+```
+
+---
+
+### Object Shorthand
+
+```javascript
+const key = "blah";
+const value = "blorg";
+const myObject = {
+  key, // key: key
+  value // value: value
+};
+```
+
+---
+
+### Arrays
+
+```javascript
+const myArray = [1, 2];
+myArray.map(val => `_${val}`); // ['_1', '_2']
+myArray.find(val => val === 1); // 1
+myArray.reduce((prev, cur) => prev + cur, 0); // 3
+myArray.forEach(val => console.log(val));
+myArray.join(","); // '1, 2'
 ```

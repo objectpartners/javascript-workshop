@@ -26,6 +26,12 @@
 
 ---
 
+## The rules are...
+
+## there are no rules
+
+---
+
 ### Dynamically typed
 
 ```js
@@ -33,19 +39,6 @@ var num = 100;
 
 num = "iamastringnowbecausereasons";
 ```
-
----
-
-### Primitive types
-
-* `Number`
-* `String`
-* `Boolean`
-* `Object`
-  * `Function`
-  * `Array`
-  * `Date`
-  * `RegExp`
 
 ---
 
@@ -69,4 +62,13 @@ fn.someProperty = true;
 
 ---
 
-<span class="emoji">🤷‍♂️</span>
+### Primitive types
+
+- `Number`
+- `String`
+- `Boolean`
+- `Object`
+  - `Function`
+  - `Array`
+  - `Date`
+  - `RegExp`

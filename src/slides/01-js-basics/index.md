@@ -19,17 +19,16 @@ Prefer `let` and `const`; we'll get to this in a bit!
 ## Primitive Types
 
 ```js
-const aString = "Hello"; // String
+const aString = "Hello"; // String - single or double quotes
 const aNumber = 13; // Number
 const aBoolean = true; // Boolean
-const aNull = null; // Null
-const anUndefined = undefined; // Undefined
+const aRegex = /[a-z]+/; // Regex
 const aSymbol = Symbol("a symbol"); // Symbol
 ```
 
 ---
 
-## Types
+## Complex Types
 
 ```js
 // Object
@@ -41,6 +40,26 @@ const anotherObject = {
 // Array
 const anEmptyArray = [];
 const anotherArray = ["Bob", 19, false];
+```
+
+---
+
+## Nil
+
+Two types of nil values:
+
+- `undefined`
+- `null`
+
+```javascript
+const oneTypeOfNil = undefined;
+const anotherTypeOfNil = null;
+
+const anObject = {
+  key: null
+};
+anObject.key; // null (exists and set to null)
+anObject.blorg; // undefined (does not exist)
 ```
 
 ---
@@ -58,7 +77,7 @@ This is a block style comment.
 
 ## Operators
 
-```js
+```javascript
 // Addition
 const thirteen = 5 + 8;
 const concatString = "Hello " + "world!";
@@ -69,6 +88,38 @@ const three = 8 - 5;
 const thirty = 3 * 10;
 // Division
 const thirtyThree = 66 / 2;
+```
+
+Most operators can be combined with assignment (+=, \*=, etc)
+
+---
+
+## Operators (continued)
+
+```javascript
+// Increment/Decrement
+const incVal = val++ || ++val;
+const decVal = val-- || --val;
+// Ternary
+const ternaryResult = evaluator ? trueResult : falseResult;
+```
+
+---
+
+## Less-used Operators
+
+```javascript
+// Modulus
+const remainder = 5 % 3;
+// Bitwise operators
+const bitwiseResult = 1 & 1 | 1 << 1 >> 1 ~ 1 ^ 1;
+// typeof
+const aType = typeof 'abc'; // 'string'
+const bType = typeof 123;   // 'number'
+// delete
+delete myObject.keyToDelete;
+// in
+"keyToCheck" in myObject; // true or false
 ```
 
 ---
@@ -124,12 +175,11 @@ Also, be careful when comparing variables of different type or against null/unde
 // If statement
 if (someCondition) {
   doSomething();
+} else if (someOtherCondition) {
+  doSomething2();
 } else {
   doSomethingElse();
 }
-
-// Ternary
-const something = someCondition ? doSomething() : doSomethingElse();
 ```
 
 ---
@@ -203,4 +253,35 @@ aFunctionDeclaration("Hello");
 aFunctionExpression("JS");
 anArrowFunction("Workshop");
 aNewFunction("!");
+```
+
+---
+
+## Function Gotchas
+
+Nothing prevents you from passing too many or two few arguments to a function
+
+```javascript
+function doStuff(a, b) { ... }
+
+doStuff(1); // Valid, 'b' will be undefined
+
+doStuff(1, 2, 3); // Also valid, 3 will be invisible inside doStuff*
+
+// * can be accessed using special 'arguments' property
+```
+
+---
+
+## Error Handling
+
+```javascript
+try {
+  throw new Error("My awesome error");
+} catch (error) {
+  // error.message === 'My awesome error'
+  // Executed in event of exception
+} finally {
+  // always runs after try or catch
+}
 ```
