@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import "prismjs";
-import loadLanguages from "prismjs/components/index.js";
 import "prismjs/plugins/keep-markup/prism-keep-markup.js";
 import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js";
 import "prismjs/plugins/unescaped-markup/prism-unescaped-markup.js";
@@ -15,7 +14,6 @@ import "./slide-deck.css";
 
 export class SlideDeck extends Component {
   componentDidMount() {
-    loadLanguages(["groovy", "json", "jsx", "flow", "typescript"]); // why groovy? Exactly.
     require.ensure(
       [
         "reveal.js",
@@ -29,7 +27,7 @@ export class SlideDeck extends Component {
         require("reveal.js/lib/js/head.min.js");
         require("reveal.js/lib/js/html5shiv.js");
 
-        window.Reveal = Reveal;
+        window["Reveal"] = Reveal;
 
         Reveal.initialize({
           history: true,
